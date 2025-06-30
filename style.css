@@ -135,14 +135,14 @@ h1 {
   transition: background-color 0.4s ease;
 }
 #Easy:hover {
-  cursor: url('face_happy_icon_246406.png'), auto;
+  cursor: url('face_happy.png'), auto;
   background-color: #0dff00df;
 }
 #Medium:hover {
-  cursor: url('emoticon-neutral-face-outline_icon-icons.com_64287.png'), auto;
+  cursor: url('neutral-face.png'), auto;
   background-color: #ff6200d1;
 }
 #Hard:hover {
-  cursor: url('face_sad_icon_246404.png'), auto;
+  cursor: url('face_sad.png'), auto;
   background-color: #ff0000d4;
 }
