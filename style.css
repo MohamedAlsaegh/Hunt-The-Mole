@@ -1,8 +1,100 @@
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 200px 3fr 200px;
+  grid-template-rows: 120px 540px 50px;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
   gap: 10px;
-  padding: 20px;
+}
+/* the title */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: rgb(214, 255, 255);
+  justify-content: center;
+}
+/* the middle holes area */
+.main {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(223, 255, 191);
+  justify-items: center;
+}
+/* the hearts area */
+.sideBarLeft {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(248, 205, 205);
+}
+/* score and reset button area */
+.sideBarRight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(202, 181, 242);
+}
+/* the lower area */
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 100 px;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: rgb(216, 124, 91);
+}
+/* hearts images */
+.heart {
+  max-width: 80%;
+  max-height: 80%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+/* the holes */
+.box {
+  background-color: rgb(160, 182, 188);
+  height: 160px;
+  width: 160px;
+  border-radius: 20em;
+  place-items: center;
+  position: relative;
+}
+/* to cen ter the mole img inside the circle*/
+.box img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -11,31 +103,8 @@ h1 {
   font-size: 60px;
 }
 
-.board {
-  margin: auto;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 50vh;
-  gap: 4px;
-}
-.box {
-  background-color: rgb(160, 182, 188);
-  height: 115px;
-}
-
-table {
-  margin: 10px auto;
-  padding: 1px;
-  border: none;
-}
-
-td {
-  padding: 7px;
-  text-align: center;
-}
-
-input {
+/* exclusive for the reset button*/
+.Reset {
   width: 120px;
   padding: 8px 12px;
   margin: 10px auto;
@@ -47,18 +116,33 @@ input {
   cursor: pointer;
   transition: background-color 0.4s ease;
 }
+/* exclusive for the reset button*/
 
-input:hover {
+.Reset:hover {
   background-color: #ac3e3e;
 }
-.imgGrid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.diff {
+  width: 120px;
+  padding: 8px 12px;
+  text-align: center;
+  margin: 10px 20px;
+  background-color: #eaeaea;
+  color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
 }
-
-.allHearts {
-  display: block;
-  width: 100px;
+#Easy:hover {
+  cursor: url('face_happy_icon_246406.png'), auto;
+  background-color: #0dff00df;
+}
+#Medium:hover {
+  cursor: url('emoticon-neutral-face-outline_icon-icons.com_64287.png'), auto;
+  background-color: #ff6200d1;
+}
+#Hard:hover {
+  cursor: url('face_sad_icon_246404.png'), auto;
+  background-color: #ff0000d4;
 }

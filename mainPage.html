@@ -5,48 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <title>Tic-Tac-Toe</title>
+    <title>Hunt-Th-Moal</title>
   </head>
   <body>
-    <!-- Build your game board, instructions, and score displays here! -->
-    <h1>Hunt The Moal</h1>
-    <div class="board">
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
-      <div class="box"><img class="imgGrid" />.</div>
+    <div class="title">
+      <h1>Hunt The Moal</h1>
     </div>
 
-    <div class="allHearts">
-      <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/032/503/523/small_2x/pixel-red-heart-illustration-free-vector.jpg"
-        class="heart"
-      />
-      <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/032/503/523/small_2x/pixel-red-heart-illustration-free-vector.jpg"
-        class="heart"
-      />
-      <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/040/740/064/small_2x/slightly-filled-black-heart-line-icon-emoji-valentine-s-day-relationships-love-life-health-game-treatment-applications-pixel-style-multicolored-icon-on-white-background-vector.jpg"
-        class="heart"
-      />
+    <div class="sideBarLeft">
+      <img class="heart" src="filled_heart-removebg-preview (1).png" />
+      <img class="heart" src="filled_heart-removebg-preview (1).png" />
+      <img class="heart" src="filled_heart-removebg-preview.png" />
     </div>
-    <table>
-      <tr>
-        <td>score</td>
-      </tr>
-      <tr>
-        <td class="player">0</td>
-      </tr>
-    </table>
 
-    <input type="Reset" />
+    <div class="main">
+      <div class="box">
+        <img src="mole-removebg-preview.png" class="imgGrid" />
+      </div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+      <div class="box"><img class="imgGrid" /></div>
+    </div>
 
-    <!-- Build your game board, instructions, and score displays here! -->
+    <div class="sideBarRight">
+      <h3>Score</h3>
+      <h3 class="score">0</h3>
+      <input class="Reset" type="Reset" />
+    </div>
+
+    <div class="bottom">
+      <h2>Difficulty:</h2>
+      <input id="Easy" class="diff" type="text" placeholder="Easy" />
+      <input id="Medium" class="diff" type="text" placeholder="Medium" />
+      <input id="Hard" class="diff" type="text" placeholder="Hard" />
+    </div>
   </body>
 </html>
