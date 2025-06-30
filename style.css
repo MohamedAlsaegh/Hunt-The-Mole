@@ -1,29 +1,31 @@
 body {
   display: grid;
   grid-template-columns: 200px 3fr 200px;
-  grid-template-rows: 120px 540px 50px;
-  margin: 0;
-  background-color: rgb(0, 0, 0);
-  padding: 10px;
+  grid-template-rows: 100px 530px 50px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 7px;
   gap: 10px;
 }
 /* the title */
 .title {
+  max-width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: rgb(214, 255, 255);
+  background-color: honeydew;
   justify-content: center;
 }
 /* the middle holes area */
 .main {
-  padding: 10px;
+  padding: 10px 250px;
   display: grid;
-  gap: 10px;
+  column-gap: 5cqmin;
+  row-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   flex-direction: column;
@@ -33,9 +35,13 @@ body {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: rgb(223, 255, 191);
-  justify-items: center;
+  background-color: honeydew;
 }
+/* .main:hover {
+  box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
+  transition: 0.5s ease;
+} */
+
 /* the hearts area */
 .sideBarLeft {
   display: flex;
@@ -46,7 +52,8 @@ body {
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: rgb(248, 205, 205);
+  /* background-color: rgb(248, 205, 205); */
+  background-color: honeydew;
 }
 /* score and reset button area */
 .sideBarRight {
@@ -58,19 +65,19 @@ body {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: rgb(202, 181, 242);
+  background-color: honeydew;
 }
 /* the lower area */
 .bottom {
   display: flex;
   justify-content: center;
-  gap: 100 px;
+  /* padding: 18px 10px; */
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: rgb(216, 124, 91);
+  background-color: honeydew;
 }
 /* hearts images */
 .heart {
@@ -82,12 +89,13 @@ body {
 }
 /* the holes */
 .box {
-  background-color: rgb(160, 182, 188);
-  height: 160px;
-  width: 160px;
+  background-color: rgb(86, 60, 45);
+  height: 150px;
+  width: 150px;
   border-radius: 20em;
   place-items: center;
   position: relative;
+  border: 5px inset rgb(86, 51, 28);
 }
 /* to cen ter the mole img inside the circle*/
 .box img {
@@ -110,14 +118,13 @@ h1 {
   margin: 10px auto;
   background-color: #4caf50;
   color: white;
-  border: none;
+  border: 3px outset #000000;
   border-radius: 11px;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.4s ease;
 }
 /* exclusive for the reset button*/
-
 .Reset:hover {
   background-color: #ac3e3e;
 }
@@ -126,23 +133,30 @@ h1 {
   padding: 8px 12px;
   text-align: center;
   margin: 10px 20px;
+  font-weight: bold;
   background-color: #eaeaea;
-  color: rgb(255, 0, 0);
-  border: none;
+  color: rgb(0, 0, 0);
   border-radius: 15px;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.4s ease;
+  border: 2px solid black;
 }
 #Easy:hover {
   cursor: url('face_happy.png'), auto;
-  background-color: #0dff00df;
+  background-color: hsla(117, 100%, 50%, 0.7);
+  box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
+  transition: 0.5s ease;
 }
 #Medium:hover {
   cursor: url('neutral-face.png'), auto;
-  background-color: #ff6200d1;
+  background-color: hsla(23, 100%, 50%, 0.7);
+  box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
+  transition: 0.5s ease;
 }
 #Hard:hover {
   cursor: url('face_sad.png'), auto;
-  background-color: #ff0000d4;
+  background-color: hsla(0, 100%, 50%, 0.7);
+  box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
+  transition: 0.5s ease;
 }
