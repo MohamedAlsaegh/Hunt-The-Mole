@@ -1,7 +1,7 @@
 body {
   display: grid;
   grid-template-columns: 200px 3fr 200px;
-  grid-template-rows: 100px 530px 50px;
+  grid-template-rows: 100px 528px 50px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.04);
   padding: 7px;
@@ -159,4 +159,7 @@ h1 {
   background-color: hsla(0, 100%, 50%, 0.7);
   box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
   transition: 0.5s ease;
+}
+.title button {
+  color: #4caf50;
 }
