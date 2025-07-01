@@ -6,7 +6,7 @@ Hunt The Mole is an Arcade game were the player has to hit the mole that will mo
 
 - How to Run the Project
 - Technologies Used
-- Game Strcture and Mechanism
+- Game Structure and Mechanism
   - Extra Ideas got added later
 - Challenges Faced
 - Demo
@@ -31,7 +31,7 @@ Hunt The Mole is an Arcade game were the player has to hit the mole that will mo
 - CSS
 - JavaScript
 
-# Game Strcture and Mechanism
+# Game Structure and Mechanism
 
 ![Game Structure](https://i.imgur.com/T4VM26g.jpeg)
 _Figure 1: Hunt The Mole game wireframe_
