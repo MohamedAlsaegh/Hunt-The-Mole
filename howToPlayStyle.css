@@ -22,18 +22,18 @@ body {
 }
 /* the middle holes area */
 .main {
-  padding: 10px 250px;
-  display: grid;
+  padding: 10px 40px;
+  display: inline;
   row-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-end: 3; */
   background-color: honeydew;
 }
 
