@@ -1,4 +1,6 @@
 // variables
+let gameDifficulty = 700
+let moleInterval
 let molePlace = 0
 let calculatedScore = 0
 let moleImg = 'mole.png'
@@ -7,15 +9,18 @@ let emptyHeart = 'empty_heart.png'
 let score = document.querySelector('.score')
 let holes = document.querySelectorAll('.moleImg')
 let hearts = document.querySelectorAll('.heart')
-let resetButton = document.querySelector('input[type="reset"]')
+let resetButton = document.querySelector('.Reset')
 let easyButton = document.querySelector('#Easy')
 let mediumButton = document.querySelector('#Medium')
 let hardButton = document.querySelector('#Hard')
-// console.log(score)
+
 // Fnucitons section
 
-const difficulty = () => {}
-const heartsResetting = () => {}
+const difficulty = () => {
+  clearInterval(moleInterval)
+  moleInterval = setInterval(moleMoving, gameDifficulty)
+}
+
 const resetAll = () => {
   calculatedScore = 0
   score.innerHTML = calculatedScore
@@ -60,19 +65,21 @@ const moleMoving = () => {
 }
 
 // Event Listeners & timers
-setInterval(moleMoving, 700)
-
 resetButton.addEventListener('click', () => {
   resetAll()
 })
 easyButton.addEventListener('click', () => {
+  gameDifficulty = 700
   difficulty()
 })
 mediumButton.addEventListener('click', () => {
+  gameDifficulty = 500
   difficulty()
 })
 hardButton.addEventListener('click', () => {
+  gameDifficulty = 300
   difficulty()
 })
-huntTheMole()
+
+difficulty()
 // moleMoving()
