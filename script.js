@@ -16,7 +16,13 @@ let hardButton = document.querySelector('#Hard')
 
 const difficulty = () => {}
 const heartsResetting = () => {}
-const resetAll = () => {}
+const resetAll = () => {
+  calculatedScore = 0
+  score.innerHTML = calculatedScore
+  for (let i = 0; i < hearts.length; i++) {
+    hearts[i].setAttribute('src', filledHeart)
+  }
+}
 const heartsLosing = () => {
   for (let i = hearts.length - 1; i >= 0; i--) {
     if (hearts[i].getAttribute('src') === filledHeart) {
@@ -28,14 +34,11 @@ const heartsLosing = () => {
 const huntTheMole = () => {
   for (let i = 0; i < holes.length; i++) {
     holes[i].addEventListener('click', () => {
-      console.log(holes[i].getAttribute('src'))
-      console.log(moleImg)
       if (holes[i].getAttribute('src') === moleImg) {
         calculatedScore++
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
       } else {
-        console.log('else')
         heartsLosing()
       }
     })
