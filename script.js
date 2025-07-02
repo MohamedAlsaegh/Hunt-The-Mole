@@ -1,15 +1,16 @@
 // variables
-let score = 0
+let score = document.querySelector('.score')
 let molePlace = 0
+let calculatedScore = 0
 let moleImg = 'mole.png'
 let fillesHeart = 'filled_heart.png'
 let emptyHeart = 'empty_heart.png'
 let holes = document.querySelectorAll('.moleImg')
 let hearts = document.querySelectorAll('.heart')
 let resetButton = document.querySelector('input[type="reset"]')
-let easyButton = document.querySelector('input[type="Easy"]')
-let mediumButton = document.querySelector('input[type="Medium"]')
-let hardButton = document.querySelector('input[type="Hard"]')
+let easyButton = document.querySelector('#Easy')
+let mediumButton = document.querySelector('#Medium')
+let hardButton = document.querySelector('#Hard')
 // console.log(score)
 // Fnucitons section
 
@@ -17,6 +18,19 @@ const difficulty = () => {}
 const heartsResetting = () => {}
 const resetAll = () => {}
 const heartsLosing = () => {}
+const huntTheMole = () => {
+  for (let i = 0; i < holes.length; i++) {
+    holes[i].addEventListener('click', () => {
+      calculatedScore++
+      if (holes[i].getAttribute('src') == 'mole.png') {
+        score.innerHTML = calculatedScore
+        holes[i].removeAttribute('src')
+      } else {
+        heartsLosing()
+      }
+    })
+  }
+}
 const moleMoving = () => {
   let emptyIndexes = []
   for (let i = 0; i < holes.length; i++) {
@@ -33,6 +47,8 @@ const moleMoving = () => {
 }
 
 // Event Listeners & timers
+setInterval(moleMoving, 1000)
+
 resetButton.addEventListener('click', () => {
   resetAll()
 })
@@ -45,6 +61,5 @@ mediumButton.addEventListener('click', () => {
 hardButton.addEventListener('click', () => {
   difficulty()
 })
-// setInterval(moleMoving, 500)
-
+huntTheMole()
 // moleMoving()
