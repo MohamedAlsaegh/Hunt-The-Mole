@@ -81,5 +81,5 @@ hardButton.addEventListener('click', () => {
   difficulty()
 })
 
-difficulty()
+huntTheMole()
 // moleMoving()
