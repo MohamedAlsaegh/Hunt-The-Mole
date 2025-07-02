@@ -3,6 +3,9 @@ let gameDifficulty = 700
 let moleInterval
 let molePlace = 0
 let calculatedScore = 0
+let loseWin = false
+let gameStopped = false
+let difficultyAvailable = false
 let moleImg = 'mole.png'
 let filledHeart = 'filled_heart.png'
 let emptyHeart = 'empty_heart.png'
@@ -13,38 +16,66 @@ let resetButton = document.querySelector('.Reset')
 let easyButton = document.querySelector('#Easy')
 let mediumButton = document.querySelector('#Medium')
 let hardButton = document.querySelector('#Hard')
+let mainDiv = document.querySelector('.main')
+
+let originalMainHTML = document.querySelector('.main').innerHTML
 
 // Fnucitons section
-
-const difficulty = () => {
+const stopGame = () => {
+  mainDiv.innerHTML = 'GAME OVER'
+  clearInterval(moleInterval)
+  difficultyAvailable = false
+  gameStopped = true
+}
+const difficulty = (loseWin) => {
+  if (loseWin === true) {
+    return
+  }
+  difficultyAvailable = true
   clearInterval(moleInterval)
   moleInterval = setInterval(moleMoving, gameDifficulty)
 }
 
 const resetAll = () => {
+  mainDiv.innerHTML = originalMainHTML
+  // Reselect elements since DOM was replaced
+  holes = document.querySelectorAll('.moleImg')
+  hearts = document.querySelectorAll('.heart')
+
   calculatedScore = 0
   score.innerHTML = calculatedScore
+  difficultyAvailable = false
+  gameStopped = false
+
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].setAttribute('src', filledHeart)
   }
+  huntTheMole()
 }
 const heartsLosing = () => {
+  if (!difficultyAvailable) return false
   for (let i = hearts.length - 1; i >= 0; i--) {
-    if (hearts[i].getAttribute('src') === filledHeart) {
+    if (hearts[i].getAttribute('src') === filledHeart && difficultyAvailable) {
       hearts[i].setAttribute('src', emptyHeart)
-      break
+      return false
     }
   }
+  return true
 }
+
 const huntTheMole = () => {
   for (let i = 0; i < holes.length; i++) {
     holes[i].addEventListener('click', () => {
+      if (gameStopped) return
       if (holes[i].getAttribute('src') === moleImg) {
         calculatedScore++
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
       } else {
-        heartsLosing()
+        const gameOver = heartsLosing()
+        if (gameOver) {
+          stopGame()
+        }
       }
     })
   }
@@ -58,10 +89,11 @@ const moleMoving = () => {
       molePlace = i
     }
   }
+  if (emptyIndexes.length === 0) return
   let randomHole = Math.floor(Math.random() * emptyIndexes.length)
   let compBox = holes[emptyIndexes[randomHole]]
   holes[molePlace].removeAttribute('src')
-  compBox.setAttribute('src', 'mole.png')
+  compBox.setAttribute('src', moleImg)
 }
 
 // Event Listeners & function running
@@ -77,7 +109,7 @@ mediumButton.addEventListener('click', () => {
   difficulty()
 })
 hardButton.addEventListener('click', () => {
-  gameDifficulty = 300
+  gameDifficulty = 350
   difficulty()
 })
 
