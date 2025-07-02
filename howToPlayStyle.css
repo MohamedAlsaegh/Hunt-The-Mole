@@ -31,6 +31,7 @@ body {
   border-radius: 11px;
   font-size: 20px;
   cursor: pointer;
+  color: rgb(0, 0, 0);
   transition: background-color 0.4s ease;
 }
 
@@ -130,7 +131,6 @@ h1 {
   border: 3px outset #000000;
   border-radius: 11px;
   font-size: 20px;
-  cursor: pointer;
   transition: background-color 0.4s ease;
 }
 /* exclusive for the reset button*/
@@ -175,7 +175,4 @@ h1 {
   background-color: hsla(0, 100%, 50%, 0.7);
   box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
   transition: 0.5s ease;
-}
-.title button {
-  color: #4caf50;
 }

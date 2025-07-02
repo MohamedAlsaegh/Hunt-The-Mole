@@ -6,6 +6,7 @@ body {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 7px;
   gap: 10px;
+  /* color: #000000; */
 }
 /* the title */
 .title {
@@ -31,7 +32,7 @@ body {
   border: 2px outset #000000;
   border-radius: 11px;
   font-size: 20px;
-  cursor: pointer;
+  color: rgb(0, 0, 0);
   transition: background-color 0.4s ease;
 }
 
@@ -176,9 +177,6 @@ h1 {
   background-color: hsla(0, 100%, 50%, 0.7);
   box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
   transition: 0.5s ease;
-}
-.title button {
-  color: #4caf50;
 }
 
 .moleImg {
