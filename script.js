@@ -28,11 +28,14 @@ const heartsLosing = () => {
 const huntTheMole = () => {
   for (let i = 0; i < holes.length; i++) {
     holes[i].addEventListener('click', () => {
+      console.log(holes[i].getAttribute('src'))
+      console.log(moleImg)
       if (holes[i].getAttribute('src') === moleImg) {
         calculatedScore++
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
       } else {
+        console.log('else')
         heartsLosing()
       }
     })

@@ -180,3 +180,11 @@ h1 {
 .title button {
   color: #4caf50;
 }
+
+.moleImg {
+  height: 165px;
+  width: 165px;
+  border-radius: 20em;
+  place-items: center;
+  position: relative;
+}
