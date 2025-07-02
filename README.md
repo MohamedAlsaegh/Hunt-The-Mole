@@ -80,6 +80,26 @@ Add 3 difficulties [ easy / mormal / hard ] only the speed will be increased -->
 
   This approach kept the game logic clean and ensured that only one active interval was running at any given time.
 
+### 🔍 Game Behavior and Heart Logic Fixes
+
+- One issue was that the game allowed heart losing even before the player started.
+
+  This was solved by using a boolean variable called `difficultyAvailable`.
+
+  Before any heart could be removed, the function checks if `difficultyAvailable` is `true`.
+
+  If it's `false`, the function simply returns and nothing happens, which made sure the player wouldn't lose hearts before selecting a difficulty.
+
+- Another issue was figuring out how to make the player lose only after all hearts are gone.
+
+  The solution was to loop through all hearts and check if there's a filled one.
+
+  If a filled heart was found, it was replaced with an empty one and the game continued.
+
+  If no filled heart was found, the function returned `true` and triggered `stopGame()`.
+
+  This made the game end exactly after the last heart was lost.
+
 <!-- Problems encountered during development and how you solved them. -->
 
 # Demo
