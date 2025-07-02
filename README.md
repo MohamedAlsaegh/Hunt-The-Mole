@@ -9,6 +9,7 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
 - Game Structure and Mechanism
   - Extra Ideas got added later
 - Challenges Faced
+  - Game Behavior and Heart Logic Fixes
 - Demo
 - Author
 
