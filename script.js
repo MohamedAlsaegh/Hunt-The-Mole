@@ -33,7 +33,18 @@ const moleMoving = () => {
 }
 
 // Event Listeners & timers
-
+resetButton.addEventListener('click', () => {
+  resetAll()
+})
+easyButton.addEventListener('click', () => {
+  difficulty()
+})
+mediumButton.addEventListener('click', () => {
+  difficulty()
+})
+hardButton.addEventListener('click', () => {
+  difficulty()
+})
 // setInterval(moleMoving, 500)
 
 // moleMoving()
