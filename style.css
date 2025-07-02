@@ -9,9 +9,9 @@ body {
 }
 /* the title */
 .title {
-  max-width: auto;
+  /* max-width: auto; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -20,6 +20,21 @@ body {
   background-color: honeydew;
   justify-content: center;
 }
+
+.howTO {
+  position: absolute;
+  top: 22px;
+  right: 40px;
+  width: 120px;
+  padding: 8px 12px;
+  /* margin-left: 340px; */
+  border: 2px outset #000000;
+  border-radius: 11px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
 /* the middle holes area */
 .main {
   padding: 10px 250px;
@@ -136,6 +151,13 @@ h1 {
   cursor: pointer;
   transition: background-color 0.4s ease;
   border: 2px solid black;
+}
+
+.howTO:hover {
+  cursor: url('questionmark.png'), auto;
+  /* background-color: hsla(120, 1%, 49%, 0.7); */
+  box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
+  transition: 0.5s ease;
 }
 #Easy:hover {
   cursor: url('face_happy.png'), auto;
