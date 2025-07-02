@@ -64,7 +64,7 @@ const moleMoving = () => {
   compBox.setAttribute('src', 'mole.png')
 }
 
-// Event Listeners & timers
+// Event Listeners & function running
 resetButton.addEventListener('click', () => {
   resetAll()
 })

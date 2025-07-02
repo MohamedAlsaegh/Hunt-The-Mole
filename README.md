@@ -1,6 +1,6 @@
 # Hunt The Mole
 
-Hunt The Mole is an Arcade game were the player has to hit the mole that will move randomly between hole to gain score.The technolog use to develop this game are HTML,CSS, and JavaScript.The challened faced during the development of this game are ....
+Hunt The Mole is an arcade game where the player must hit a mole that moves randomly between holes to gain points. This game is developed using HTML, CSS, and JavaScript. During development, challenges included managing the mole’s random movement, handling clicks on empty holes to reduce hearts, and implementing difficulty levels without causing interval conflicts.
 
 # Table of Contents
 
@@ -27,9 +27,9 @@ Hunt The Mole is an Arcade game were the player has to hit the mole that will mo
 
 # Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- `HTML`
+- `CSS`
+- `JavaScript`
 
 # Game Structure and Mechanism
 
@@ -53,14 +53,32 @@ _Figure 1: Hunt The Mole game wireframe_
 
 ### Extra Ideas got added later
 
-..
+ <!-- Hammer Cursor Animation: The mouse cursor changes to a hammer that swings when the player clicks, adding a fun visual effect to each hit attempt. -->
+
+- Difficulty Levels: Three modes added — Easy, Normal, and Hard — which control how fast the mole appears and disappears. This gives players a challenge based on their skill level.
 
 <!-- Make the cursor look like a hammer that swing during hitting
 Add 3 difficulties [ easy / mormal / hard ] only the speed will be increased -->
 
 # Challenges Faced
 
-..
+- One of the first challenges during development was figuring out how to make the mole appear and disappear randomly between the holes.
+
+  This was solved by storing the indexes of empty holes in an array and tracking the current mole's index in a separate variable.
+
+  A random index is selected from the array to place the mole, while the previous mole image is removed using its stored index from a separate variable.
+
+- The second challenge was making the losing-heart function work correctly when the player clicks on an empty hole.
+
+  Although the solution was simple, it was frustrating during development. The issue was that images with an empty `src` had a size of `0px`, making them unclickable.
+
+  This was solved by giving all mole image elements a fixed height and width therow CSS, even when their `src` was empty, allowing clicks to be detected properly.
+
+- The most difficult issue was implementing the difficulty levels without creating multiple overlapping intervals, which caused the game to behave unpredictably.
+
+  The solution was to store the interval ID in a variable inside a function. Whenever a new difficulty level is selected, the function clears the previous interval using `clearInterval()` and starts a new one based on the selected speed.
+
+  This approach kept the game logic clean and ensured that only one active interval was running at any given time.
 
 <!-- Problems encountered during development and how you solved them. -->
 
