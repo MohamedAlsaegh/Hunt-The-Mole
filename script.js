@@ -22,7 +22,11 @@ let originalMainHTML = document.querySelector('.main').innerHTML
 
 // Fnucitons section
 const stopGame = () => {
-  mainDiv.innerHTML = 'GAME OVER'
+  mainDiv.innerHTML = `
+    <div style="display: flex; align-items: center;">
+      <img src="game_over.png" alt="Game Over" style="max-width: 280%;">
+    </div>
+  `
   clearInterval(moleInterval)
   difficultyAvailable = false
   gameStopped = true

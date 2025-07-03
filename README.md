@@ -58,6 +58,8 @@ _Figure 1: Hunt The Mole game wireframe_
 
 - Difficulty Levels: Three modes added — Easy, Normal, and Hard — which control how fast the mole appears and disappears. This gives players a challenge based on their skill level.
 
+- Game Over Statement: When the player loses all hearts, a large "Game Over" message is prominently displayed in the center of the screen to indicate the end of the game.
+
 <!-- Make the cursor look like a hammer that swing during hitting
 Add 3 difficulties [ easy / mormal / hard ] only the speed will be increased -->
 
