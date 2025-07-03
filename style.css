@@ -10,7 +10,6 @@ body {
 }
 /* the title */
 .title {
-  /* max-width: auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +27,6 @@ body {
   right: 40px;
   width: 120px;
   padding: 8px 12px;
-  /* margin-left: 340px; */
   border: 2px outset #000000;
   border-radius: 11px;
   font-size: 20px;
@@ -63,7 +61,6 @@ body {
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 3;
-  /* background-color: rgb(248, 205, 205); */
   background-color: honeydew;
 }
 /* score and reset button area */
@@ -82,7 +79,6 @@ body {
 .bottom {
   display: flex;
   justify-content: center;
-  /* padding: 18px 10px; */
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -156,7 +152,6 @@ h1 {
 
 .howTO:hover {
   cursor: url('questionmark.png'), auto;
-  /* background-color: hsla(120, 1%, 49%, 0.7); */
   box-shadow: 0 0 20px 5px rgba(52, 152, 219, 0.5);
   transition: 0.5s ease;
 }
@@ -186,7 +181,3 @@ h1 {
   place-items: center;
   position: relative;
 }
-
-/* .gameOver {
-  font-size: 100px;
-} */

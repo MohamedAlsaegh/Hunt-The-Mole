@@ -118,4 +118,3 @@ hardButton.addEventListener('click', () => {
 })
 
 huntTheMole()
-// moleMoving()
