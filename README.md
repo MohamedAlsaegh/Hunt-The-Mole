@@ -2,15 +2,27 @@
 
 Hunt The Mole is an arcade game where the player must hit a mole that moves randomly between holes to gain points. This game is developed using HTML, CSS, and JavaScript. During development, challenges included managing the mole’s random movement, handling clicks on empty holes to reduce hearts, and implementing difficulty levels without causing interval conflicts.
 
+# Demo
+
+📷 **Screenshot Preview**  
+[Watch the demo](demo.mp4)
+
+🔗 **[Play the Game Live](https://hunt-the-mole.surge.sh/)**
+
+---
+
+<!-- Visual preview or link to live demo. -->
+
 # Table of Contents
 
+- introduction
+- Demo
 - How to Run the Project
 - Technologies Used
 - Game Structure and Mechanism
   - Extra Ideas got added later
 - Challenges Faced
   - Game Behavior and Heart Logic Fixes
-- Demo
 - Author
 
 # How to Run the Project
@@ -54,16 +66,11 @@ _Figure 1: Hunt The Mole game wireframe_
 
 ### Extra Ideas got added later
 
- <!-- Hammer Cursor Animation: The mouse cursor changes to a hammer that swings when the player clicks, adding a fun visual effect to each hit attempt. -->
-
 - Difficulty Levels: Three modes added — Easy, Normal, and Hard — which control how fast the mole appears and disappears. This gives players a challenge based on their skill level.
 
 - Game Over Statement: When the player loses all hearts, a large "Game Over" message is prominently displayed in the center of the screen to indicate the end of the game.
 
-<!-- Make the cursor look like a hammer that swing during hitting
-Add 3 difficulties [ easy / mormal / hard ] only the speed will be increased -->
-
-# Challenges Faced
+# Challenges Faced <!-- Problems encountered during development and how you solved them. -->
 
 - One of the first challenges during development was figuring out how to make the mole appear and disappear randomly between the holes.
 
@@ -103,16 +110,10 @@ Add 3 difficulties [ easy / mormal / hard ] only the speed will be increased -->
 
   This made the game end exactly after the last heart was lost.
 
-<!-- Problems encountered during development and how you solved them. -->
-
-# Demo
-
-..
-
-<!-- Visual preview or link to live demo. -->
-
 # Author
 
-..
+**Developed by Mohamed Alsaegh**  
+📫 Email: [mad6717@gmail.com](mailto:mad6717@gmail.com)  
+🔗 GitHub: [MohamedAlsaegh](https://github.com/MohamedAlsaegh)
 
 <!-- How to reach you or link to your profile. -->
