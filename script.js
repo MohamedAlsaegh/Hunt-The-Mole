@@ -17,8 +17,12 @@ let easyButton = document.querySelector('#Easy')
 let mediumButton = document.querySelector('#Medium')
 let hardButton = document.querySelector('#Hard')
 let mainDiv = document.querySelector('.main')
-
 let originalMainHTML = document.querySelector('.main').innerHTML
+const HardModeOSTSound = new Audio('HardModeOST.mp3')
+const gameOverSound = new Audio('gameOver.mp3')
+const resetSound = new Audio('reset.mp3')
+const heartLosingSound = new Audio('heartLosing.mp3')
+const scoreSound = new Audio('score.mp3')
 
 // Fnucitons section
 const stopGame = () => {
@@ -27,7 +31,6 @@ const stopGame = () => {
       <img src="game_over.png" alt="Game Over" style="max-width: 270%;">
     </div>
   `
-  const gameOverSound = new Audio('gameOver.mp3')
   gameOverSound.play()
 
   clearInterval(moleInterval)
@@ -44,8 +47,9 @@ const difficulty = (loseWin) => {
 }
 
 const resetAll = () => {
-  const resetSound = new Audio('reset.mp3')
   resetSound.play()
+  HardModeOSTSound.pause()
+  HardModeOSTSound.currentTime = 0
   mainDiv.innerHTML = originalMainHTML
   // Reselect elements since DOM was replaced
   holes = document.querySelectorAll('.moleImg')
@@ -70,13 +74,11 @@ const huntTheMole = () => {
         calculatedScore++
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
-        const scoreSound = new Audio('score.mp3')
         scoreSound.play()
       } else {
         // Lose one heart
         for (let i = hearts.length - 1; i >= 0; i--) {
           if (hearts[i].getAttribute('src') === filledHeart) {
-            const heartLosingSound = new Audio('heartLosing.mp3')
             heartLosingSound.play()
             hearts[i].setAttribute('src', emptyHeart)
             break
@@ -118,16 +120,18 @@ resetButton.addEventListener('click', () => {
   resetAll()
 })
 easyButton.addEventListener('click', () => {
-  gameDifficulty = 700
+  gameDifficulty = 900
   difficulty()
 })
 mediumButton.addEventListener('click', () => {
-  gameDifficulty = 500
+  gameDifficulty = 700
   difficulty()
 })
 hardButton.addEventListener('click', () => {
   gameDifficulty = 350
   difficulty()
+
+  HardModeOSTSound.play()
 })
 
 huntTheMole()
