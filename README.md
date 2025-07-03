@@ -4,12 +4,10 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
 
 # 🎮 Demo
 
-📷 **Screenshot Preview**  
-[Watch the demo video ! ](https://i.imgur.com/Rfj0Wye.mp4)
+📷 **GIF Preview**  
+![Watch the demo video !](demo.gif)
 
-🔗 **[Play the Game Live](https://hunt-the-mole.surge.sh/)**
-
----
+### 🔗 **[Play the Game Live](https://hunt-the-mole.surge.sh/)**
 
 <!-- Visual preview or link to live demo. -->
 
@@ -17,6 +15,8 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
 
 - introduction
 - Demo
+  - GIF Preview
+  - Play the Game Live
 - How to Run the Project
 - Technologies Used
 - Game Structure and Mechanism
