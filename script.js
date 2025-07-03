@@ -27,6 +27,9 @@ const stopGame = () => {
       <img src="game_over.png" alt="Game Over" style="max-width: 270%;">
     </div>
   `
+  const gameOverSound = new Audio('gameOver.mp3')
+  gameOverSound.play()
+
   clearInterval(moleInterval)
   difficultyAvailable = false
   gameStopped = true
@@ -41,6 +44,8 @@ const difficulty = (loseWin) => {
 }
 
 const resetAll = () => {
+  const resetSound = new Audio('reset.mp3')
+  resetSound.play()
   mainDiv.innerHTML = originalMainHTML
   // Reselect elements since DOM was replaced
   holes = document.querySelectorAll('.moleImg')
@@ -56,16 +61,6 @@ const resetAll = () => {
   }
   huntTheMole()
 }
-const heartsLosing = () => {
-  if (!difficultyAvailable) return false
-  for (let i = hearts.length - 1; i >= 0; i--) {
-    if (hearts[i].getAttribute('src') === filledHeart && difficultyAvailable) {
-      hearts[i].setAttribute('src', emptyHeart)
-      return false
-    }
-  }
-  return true
-}
 
 const huntTheMole = () => {
   for (let i = 0; i < holes.length; i++) {
@@ -75,10 +70,14 @@ const huntTheMole = () => {
         calculatedScore++
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
+        const scoreSound = new Audio('score.mp3')
+        scoreSound.play()
       } else {
         // Lose one heart
         for (let i = hearts.length - 1; i >= 0; i--) {
           if (hearts[i].getAttribute('src') === filledHeart) {
+            const heartLosingSound = new Audio('heartLosing.mp3')
+            heartLosingSound.play()
             hearts[i].setAttribute('src', emptyHeart)
             break
           }
@@ -110,6 +109,7 @@ const moleMoving = () => {
   let randomHole = Math.floor(Math.random() * emptyIndexes.length)
   let compBox = holes[emptyIndexes[randomHole]]
   holes[molePlace].removeAttribute('src')
+
   compBox.setAttribute('src', moleImg)
 }
 
