@@ -32,7 +32,6 @@ const stopGame = () => {
     </div>
   `
   gameOverSound.play()
-
   clearInterval(moleInterval)
   difficultyAvailable = false
   gameStopped = true
@@ -54,7 +53,6 @@ const resetAll = () => {
   // Reselect elements since DOM was replaced
   holes = document.querySelectorAll('.moleImg')
   hearts = document.querySelectorAll('.heart')
-
   calculatedScore = 0
   score.innerHTML = calculatedScore
   difficultyAvailable = false
@@ -92,12 +90,12 @@ const huntTheMole = () => {
             break
           }
         }
-
         if (!filledFound) stopGame()
       }
     })
   }
 }
+
 const moleMoving = () => {
   let emptyIndexes = []
   for (let i = 0; i < holes.length; i++) {
@@ -130,7 +128,6 @@ mediumButton.addEventListener('click', () => {
 hardButton.addEventListener('click', () => {
   gameDifficulty = 350
   difficulty()
-
   HardModeOSTSound.play()
 })
 
