@@ -1,11 +1,11 @@
-# Hunt The Mole
+# 🕹️ Hunt The Mole
 
 Hunt The Mole is an arcade game where the player must hit a mole that moves randomly between holes to gain points. This game is developed using HTML, CSS, and JavaScript. During development, challenges included managing the mole’s random movement, handling clicks on empty holes to reduce hearts, and implementing difficulty levels without causing interval conflicts.
 
-# Demo
+# 🎮 Demo
 
 📷 **Screenshot Preview**  
-[Watch the demo](demo.mp4)
+[Watch the demo video ! ](https://i.imgur.com/Rfj0Wye.mp4)
 
 🔗 **[Play the Game Live](https://hunt-the-mole.surge.sh/)**
 
@@ -13,7 +13,7 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
 
 <!-- Visual preview or link to live demo. -->
 
-# Table of Contents
+# 📋 Table of Contents
 
 - introduction
 - Demo
@@ -25,7 +25,7 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
   - Game Behavior and Heart Logic Fixes
 - Author
 
-# How to Run the Project
+# 🚀 How to Run the Project
 
 1. Fork or Clone this Repository You can either fork it to your account or clone it locally.
 2. Make Sure index.html is in the Root Folder GitHub Pages needs an index.html file in the main directory.
@@ -38,13 +38,13 @@ Hunt The Mole is an arcade game where the player must hit a mole that moves rand
 
 5. Open the Link in Your Browser Your project should now be live!
 
-# Technologies Used
+# 🛠 Technologies Used
 
 - `HTML`
 - `CSS`
 - `JavaScript`
 
-# Game Structure and Mechanism
+# 🧠 Game Structure and Mechanism
 
 ![Game Structure](https://i.imgur.com/T4VM26g.jpeg)
 _Figure 1: Hunt The Mole game wireframe_
@@ -64,13 +64,13 @@ _Figure 1: Hunt The Mole game wireframe_
   2. Allow the player to reset the game at any time.
      Pressing reset restores the hearts back to 3 and resets the score to zero.
 
-### Extra Ideas got added later
+### 💡 Extra Ideas got added later
 
 - Difficulty Levels: Three modes added — Easy, Normal, and Hard — which control how fast the mole appears and disappears. This gives players a challenge based on their skill level.
 
 - Game Over Statement: When the player loses all hearts, a large "Game Over" message is prominently displayed in the center of the screen to indicate the end of the game.
 
-# Challenges Faced <!-- Problems encountered during development and how you solved them. -->
+# 🧩 Challenges Faced <!-- Problems encountered during development and how you solved them. -->
 
 - One of the first challenges during development was figuring out how to make the mole appear and disappear randomly between the holes.
 
@@ -110,10 +110,11 @@ _Figure 1: Hunt The Mole game wireframe_
 
   This made the game end exactly after the last heart was lost.
 
-# Author
+## 👤 Author
 
 **Developed by Mohamed Alsaegh**  
 📫 Email: [mad6717@gmail.com](mailto:mad6717@gmail.com)  
-🔗 GitHub: [MohamedAlsaegh](https://github.com/MohamedAlsaegh)
+🔗 GitHub: [MohamedAlsaegh](https://github.com/MohamedAlsaegh)  
+💼 LinkedIn: [Mohamed Alsaegh](https://www.linkedin.com/in/mohamed-alsaegh-304ab31a3/)
 
 <!-- How to reach you or link to your profile. -->
