@@ -24,7 +24,7 @@ let originalMainHTML = document.querySelector('.main').innerHTML
 const stopGame = () => {
   mainDiv.innerHTML = `
     <div style="display: flex; align-items: center;">
-      <img src="game_over.png" alt="Game Over" style="max-width: 280%;">
+      <img src="game_over.png" alt="Game Over" style="max-width: 270%;">
     </div>
   `
   clearInterval(moleInterval)
@@ -76,10 +76,23 @@ const huntTheMole = () => {
         score.innerHTML = calculatedScore
         holes[i].removeAttribute('src')
       } else {
-        const gameOver = heartsLosing()
-        if (gameOver) {
-          stopGame()
+        // Lose one heart
+        for (let i = hearts.length - 1; i >= 0; i--) {
+          if (hearts[i].getAttribute('src') === filledHeart) {
+            hearts[i].setAttribute('src', emptyHeart)
+            break
+          }
         }
+        // Manually check if any hearts are still filled
+        let filledFound = false
+        for (let i = 0; i < hearts.length; i++) {
+          if (hearts[i].getAttribute('src') === filledHeart) {
+            filledFound = true
+            break
+          }
+        }
+
+        if (!filledFound) stopGame()
       }
     })
   }
