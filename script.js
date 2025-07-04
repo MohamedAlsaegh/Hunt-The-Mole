@@ -109,7 +109,6 @@ const moleMoving = () => {
   let randomHole = Math.floor(Math.random() * emptyIndexes.length)
   let compBox = holes[emptyIndexes[randomHole]]
   holes[molePlace].removeAttribute('src')
-
   compBox.setAttribute('src', moleImg)
 }
 
@@ -120,10 +119,14 @@ resetButton.addEventListener('click', () => {
 easyButton.addEventListener('click', () => {
   gameDifficulty = 900
   difficulty()
+  HardModeOSTSound.pause()
+  HardModeOSTSound.currentTime = 0
 })
 mediumButton.addEventListener('click', () => {
   gameDifficulty = 700
   difficulty()
+  HardModeOSTSound.pause()
+  HardModeOSTSound.currentTime = 0
 })
 hardButton.addEventListener('click', () => {
   gameDifficulty = 350
