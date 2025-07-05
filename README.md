@@ -92,7 +92,7 @@ _Figure 1: Hunt The Mole game wireframe_
 
 ### 🔍 Game Behavior and Heart Logic Fixes
 
-- One issue was that the game allowed heart losing even before the player started.
+- One issue was that the game **allowed heart losing even before the player started**.
 
   This was solved by using a boolean variable called `difficultyAvailable`.
 
