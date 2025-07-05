@@ -3,7 +3,7 @@ body {
   grid-template-columns: 200px 3fr 200px;
   grid-template-rows: 100px 528px 50px;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 74, 94, 0.123);
   padding: 7px;
   gap: 10px;
   /* color: #000000; */
