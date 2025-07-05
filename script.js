@@ -29,17 +29,14 @@ const stopGame = () => {
   mainDiv.innerHTML = `
     <div style="display: flex; align-items: center;">
       <img src="game_over.png" alt="Game Over" style="max-width: 270%;">
-    </div>
-  `
+    </div>`
   gameOverSound.play()
   clearInterval(moleInterval)
   difficultyAvailable = false
   gameStopped = true
 }
-const difficulty = (loseWin) => {
-  if (loseWin === true) {
-    return
-  }
+
+const difficulty = () => {
   difficultyAvailable = true
   clearInterval(moleInterval)
   moleInterval = setInterval(moleMoving, gameDifficulty)
@@ -61,13 +58,16 @@ const resetAll = () => {
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].setAttribute('src', filledHeart)
   }
+  gameDifficulty = 900
+  difficulty()
   huntTheMole()
 }
 
 const huntTheMole = () => {
   for (let i = 0; i < holes.length; i++) {
     holes[i].addEventListener('click', () => {
-      if (gameStopped) return
+      if (gameStopped) return //to stop the game
+      if (!difficultyAvailable) return //prevent losing heart before starting
       if (holes[i].getAttribute('src') === moleImg) {
         calculatedScore++
         score.innerHTML = calculatedScore

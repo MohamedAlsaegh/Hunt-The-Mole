@@ -72,19 +72,19 @@ _Figure 1: Hunt The Mole game wireframe_
 
 # 🧩 Challenges Faced <!-- Problems encountered during development and how you solved them. -->
 
-- One of the first challenges during development was figuring out how to make the mole appear and disappear randomly between the holes.
+- One of the first challenges during development was figuring out **how to make the mole appear** and disappear randomly between the holes.
 
   This was solved by storing the indexes of empty holes in an array and tracking the current mole's index in a separate variable.
 
   A random index is selected from the array to place the mole, while the previous mole image is removed using its stored index from a separate variable.
 
-- The second challenge was making the losing-heart function work correctly when the player clicks on an empty hole.
+- The second challenge was **making the losing-heart function work correctly** when the player clicks on an empty hole.
 
   Although the solution was simple, it was frustrating during development. The issue was that images with an empty `src` had a size of `0px`, making them unclickable.
 
   This was solved by giving all mole image elements a fixed height and width therow CSS, even when their `src` was empty, allowing clicks to be detected properly.
 
-- The most difficult issue was implementing the difficulty levels without creating multiple overlapping intervals, which caused the game to behave unpredictably.
+- The most difficult issue was **implementing the difficulty** levels without creating multiple overlapping intervals, which caused the game to behave unpredictably.
 
   The solution was to store the interval ID in a variable inside a function. Whenever a new difficulty level is selected, the function clears the previous interval using `clearInterval()` and starts a new one based on the selected speed.
 
