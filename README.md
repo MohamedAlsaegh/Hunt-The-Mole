@@ -100,7 +100,7 @@ _Figure 1: Hunt The Mole game wireframe_
 
   If it's `false`, the function simply returns and nothing happens, which made sure the player wouldn't lose hearts before selecting a difficulty.
 
-- Another issue was figuring out how to make the player lose only after all hearts are gone.
+- Another issue was figuring out **how to make the player lose only after all hearts are gone**.
 
   The solution was to loop through all hearts and check if there's a filled one.
 
