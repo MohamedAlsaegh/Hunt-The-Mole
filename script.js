@@ -117,19 +117,19 @@ resetButton.addEventListener('click', () => {
   resetAll()
 })
 easyButton.addEventListener('click', () => {
-  gameDifficulty = 900
+  gameDifficulty = 1500
   difficulty()
   HardModeOSTSound.pause()
   HardModeOSTSound.currentTime = 0
 })
 mediumButton.addEventListener('click', () => {
-  gameDifficulty = 700
+  gameDifficulty = 900
   difficulty()
   HardModeOSTSound.pause()
   HardModeOSTSound.currentTime = 0
 })
 hardButton.addEventListener('click', () => {
-  gameDifficulty = 350
+  gameDifficulty = 450
   difficulty()
   HardModeOSTSound.play()
 })
